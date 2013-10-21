@@ -1,5 +1,10 @@
 PREFIX = /usr/local
-INSTALL_DIR = $(PREFIX)/lib/lv2
+
+ifndef INSTALL_PATH
+	INSTALL_PATH = $(PREFIX)/lib/lv2/
+endif
+
+INSTALL_DIR=$(INSTALL_PATH)
 
 VERSION = 1.0.15
 
@@ -104,6 +109,7 @@ install-really:
 		install -pd $(INSTALL_DIR_REALLY)/$$plugin; \
 		install -pm 755 plugins/$$plugin/*-$(OS).$(EXT) $(INSTALL_DIR_REALLY)/$$plugin/ ; \
 		install -pm 644 plugins/$$plugin/*.ttl $(INSTALL_DIR_REALLY)/$$plugin/ ; \
+		test -f plugins/$$plugin/modgui && cp -r plugins/$$plugin/modgui $(INSTALL_DIR_REALLY)/$$plugin/ || true ; \
 	done
 
 dist: real-clean all dist-clean

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+list_bundles() {
+    for lv2 in plugins/*lv2; do echo `basename $lv2`; done
+}
+
+if [ "x${1}x" == "x-lx" ]; then
+    list_bundles
+    exit 0
+fi
+
+if [ "x${LV2_PATH}x" == "xx" ]; then
+    LV2_PATH=~/.lv2/
+fi
+
+
+make
+make INSTALL_PATH=$LV2_PATH install-system
