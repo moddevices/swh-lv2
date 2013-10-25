@@ -109,7 +109,7 @@ install-really:
 		install -pd $(INSTALL_DIR_REALLY)/$$plugin; \
 		install -pm 755 plugins/$$plugin/*-$(OS).$(EXT) $(INSTALL_DIR_REALLY)/$$plugin/ ; \
 		install -pm 644 plugins/$$plugin/*.ttl $(INSTALL_DIR_REALLY)/$$plugin/ ; \
-		test -f plugins/$$plugin/modgui && cp -r plugins/$$plugin/modgui $(INSTALL_DIR_REALLY)/$$plugin/ || true ; \
+		test -d plugins/$$plugin/modgui && cp -r plugins/$$plugin/modgui $(INSTALL_DIR_REALLY)/$$plugin/ || true ; \
 	done
 
 dist: real-clean all dist-clean
