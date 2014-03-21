@@ -1,0 +1,27 @@
+{
+    "author": "SWH", 
+    "color": "purple", 
+    "controls": [
+        {
+            "name": "Attack time", 
+            "symbol": "attack_p"
+        }, 
+        {
+            "name": "Decay time", 
+            "symbol": "decay_p"
+        }, 
+        {
+            "name": "Modulation depth", 
+            "symbol": "depth_p"
+        }, 
+        {
+            "name": "Feedback", 
+            "symbol": "fb"
+        }, 
+        {
+            "name": "Spread", 
+            "symbol": "spread"
+        }
+    ], 
+    "label": "Auto phaser"
+}

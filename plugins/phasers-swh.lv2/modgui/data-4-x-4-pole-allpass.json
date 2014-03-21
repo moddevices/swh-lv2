@@ -1,0 +1,39 @@
+{
+    "author": "SWH", 
+    "color": "purple", 
+    "controls": [
+        {
+            "name": "Frequency 1", 
+            "symbol": "f0"
+        }, 
+        {
+            "name": "Frequency 2", 
+            "symbol": "f1"
+        }, 
+        {
+            "name": "Frequency 3", 
+            "symbol": "f2"
+        }, 
+        {
+            "name": "Frequency 4", 
+            "symbol": "f3"
+        }, 
+        {
+            "name": "Feedback 1", 
+            "symbol": "fb0"
+        }, 
+        {
+            "name": "Feedback 2", 
+            "symbol": "fb1"
+        }, 
+        {
+            "name": "Feedback 3", 
+            "symbol": "fb2"
+        }, 
+        {
+            "name": "Feedback 4", 
+            "symbol": "fb3"
+        }
+    ], 
+    "label": "4 x 4 pole allpass phaser"
+}

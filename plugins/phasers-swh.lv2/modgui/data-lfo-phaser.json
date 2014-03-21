@@ -1,0 +1,23 @@
+{
+    "author": "SWH", 
+    "color": "purple", 
+    "controls": [
+        {
+            "name": "LFO rate", 
+            "symbol": "lfo_rate"
+        }, 
+        {
+            "name": "LFO depth", 
+            "symbol": "lfo_depth"
+        }, 
+        {
+            "name": "Feedback", 
+            "symbol": "fb"
+        }, 
+        {
+            "name": "Spread", 
+            "symbol": "spread"
+        }
+    ], 
+    "label": "LFO Phaser"
+}

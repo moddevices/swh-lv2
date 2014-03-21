@@ -1,0 +1,27 @@
+{
+    "author": "SWH", 
+    "color": "brown", 
+    "controls": [
+        {
+            "name": "Year", 
+            "symbol": "year"
+        }, 
+        {
+            "name": "RPM", 
+            "symbol": "rpm"
+        }, 
+        {
+            "name": "Surface warping", 
+            "symbol": "warp"
+        }, 
+        {
+            "name": "Crackle", 
+            "symbol": "click"
+        }, 
+        {
+            "name": "Wear", 
+            "symbol": "wear"
+        }
+    ], 
+    "label": "VyNil"
+}

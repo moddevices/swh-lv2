@@ -1,0 +1,39 @@
+{
+    "author": "SWH", 
+    "color": "white", 
+    "controls": [
+        {
+            "name": "Random seed", 
+            "symbol": "seed"
+        }, 
+        {
+            "name": "Input gain", 
+            "symbol": "gain"
+        }, 
+        {
+            "name": "Feedback", 
+            "symbol": "feedback_pc"
+        }, 
+        {
+            "name": "Number of taps", 
+            "symbol": "tap_count"
+        }, 
+        {
+            "name": "First delay", 
+            "symbol": "first_delay"
+        }, 
+        {
+            "name": "Delay range", 
+            "symbol": "delay_range"
+        }, 
+        {
+            "name": "Delay change", 
+            "symbol": "delay_scale"
+        }, 
+        {
+            "name": "Delay random", 
+            "symbol": "delay_rand_pc"
+        }
+    ], 
+    "label": "Delayorama"
+}
