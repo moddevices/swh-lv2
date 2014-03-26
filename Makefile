@@ -69,22 +69,23 @@ gverb: gverb/gverb.c gverb/gverbdsp.c gverb/gverb.o gverb/gverbdsp.o
 util: util/blo.o util/iir.o util/db.o util/rms.o util/pitchscale.o
 
 %.c: OBJ = $(shell echo $@ | sed 's/\.c$$/-@OS@.$(EXT)/')
-%.c: %.xml xslt/source.xsl xslt/manifest.xsl
-	xsltproc -novalid xslt/source.xsl $*.xml | sed 's/LADSPA_Data/float/g' > $@
-	xsltproc -novalid -stringparam obj `basename $(OBJ)` xslt/manifest.xsl $*.xml > `dirname $@`/manifest.ttl.in
+# %.c: %.xml xslt/source.xsl xslt/manifest.xsl
+# 	xsltproc -novalid xslt/source.xsl $*.xml | sed 's/LADSPA_Data/float/g' > $@
+# 	xsltproc -novalid -stringparam obj `basename $(OBJ)` xslt/manifest.xsl $*.xml > `dirname $@`/manifest.ttl.in
 
-%.ttl: %.xml xslt/turtle.xsl
-	xsltproc -novalid xslt/turtle.xsl $*.xml | sed 's/\\/\\\\/g' > $@
+# %.ttl: %.xml xslt/turtle.xsl
+# 	xsltproc -novalid xslt/turtle.xsl $*.xml | sed 's/\\/\\\\/g' > $@
 
 %.o: NAME = $(shell echo -n $@ | sed 's/plugins\/\(.*\)-swh.*/\1/')
 %.o: %.c
 	$(CC) $(PLUGIN_CFLAGS) $($(NAME)_CFLAGS) $*.c -c -o $@
 
 %.$(EXT): NAME = $(shell echo $@ | sed 's/plugins\/\(.*\)-swh.*/\1/')
-%.$(EXT): %.xml %.o %.ttl
+# %.$(EXT): %.xml %.o %.ttl
+%.$(EXT): %.o
 	$(CC) $*.o $(PLUGIN_LDFLAGS) $($(NAME)_LDFLAGS) -o $@
 	cp $@ $*-$(OS).$(EXT)
-	sed 's/@OS@/$(OS)/g' < `dirname $@`/manifest.ttl.in > `dirname $@`/manifest.ttl
+	# sed 's/@OS@/$(OS)/g' < `dirname $@`/manifest.ttl.in > `dirname $@`/manifest.ttl
 
 clean: dist-clean
 
@@ -119,4 +120,5 @@ dist: real-clean all dist-clean
 	rm -rf swh-lv2-$(VERSION)
 	mv ../swh-lv2-$(VERSION).tar.gz .
 
-.PRECIOUS: %.c %.ttl
+.PRECIOUS: %.c
+# .PRECIOUS: %.c %.ttl
