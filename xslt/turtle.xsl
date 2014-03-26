@@ -8,6 +8,12 @@
 @prefix swhext: &lt;http://plugin.org.uk/extensions#&gt; .
 @prefix pg: &lt;http://lv2plug.in/ns/ext/port-groups#&gt; .
 @prefix pprops: &lt;http://lv2plug.in/ns/ext/port-props#&gt; .
+@prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;.
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;.
+@prefix units: &lt;http://lv2plug.in/ns/extensions/units#&gt; .
+@prefix epp: &lt;http://lv2plug.in/ns/ext/port-props/#&gt;.
+@prefix time: &lt;http://lv2plug.in/ns/ext/time/#&gt;.
+@prefix mod: &lt;http://portalmod.com/ns/modgui#&gt;.
 <xsl:for-each select="ladspa/plugin">
   <xsl:variable name="pluglabel" select="@label"/>
   <xsl:for-each select="group">
@@ -93,7 +99,16 @@ swh:<xsl:value-of select="$pluglabel"/> a :Plugin ;
      swhext:code """<xsl:value-of select="."/>""" ;
    ] ;
   </xsl:for-each>
-   swhext:createdBy &lt;http://plugin.org.uk/swh-plugins/toTurtle.xsl&gt; .
+  <xsl:variable name="modguilabel" select="translate(name,'ABCDEFGHIJKLMNOPQRSTUVWXYZ (){}[]','abcdefghijklmnopqrstuvwxyz-')"/>
+   swhext:createdBy &lt;http://plugin.org.uk/swh-plugins/toTurtle.xsl&gt; ;
+   mod:gui [
+        a mod:Gui;
+        mod:resourcesDirectory &lt;modgui&gt;;
+        mod:iconTemplate &lt;modgui/icon-<xsl:value-of select="$modguilabel"/>.html&gt;;
+        mod:templateData &lt;modgui/data-<xsl:value-of select="$modguilabel"/>.json&gt;;
+        mod:screenshot &lt;modgui/screenshot-<xsl:value-of select="$modguilabel"/>.png&gt;;
+        mod:thumbnail &lt;modgui/thumb-<xsl:value-of select="$modguilabel"/>.png&gt;;
+    ] .
 </xsl:for-each>
 </xsl:template>
 
