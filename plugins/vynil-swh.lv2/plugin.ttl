@@ -13,7 +13,7 @@
 @prefix mod: <http://portalmod.com/ns/modgui#>.
 
 swh:vynil a :Plugin ;
-   a :DistortionPlugin ;
+   a :SimulatorPlugin ;
 
    doap:name "VyNil (Vinyl Effect)" ;
    doap:maintainer [
