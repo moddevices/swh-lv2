@@ -58,7 +58,7 @@ float shape = 0.0f;
 if (shapep < 1.0f && shapep > -1.0f) {
 	shape = 1.0f;
 } else if (shapep < 0) {
-	shape = -1.0f / shape;
+	shape = -1.0f / shapep;
 } else {
 	shape = shapep;
 }
