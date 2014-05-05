@@ -1,0 +1,15 @@
+{
+    "author": "SWH", 
+    "color": "orange", 
+    "controls": [
+        {
+            "name": "Bit depth", 
+            "symbol": "bits"
+        }, 
+        {
+            "name": "Sample rate (Hz)", 
+            "symbol": "fs"
+        }
+    ], 
+    "label": "Decimator"
+}

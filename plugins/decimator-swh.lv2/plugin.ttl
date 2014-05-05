@@ -40,8 +40,8 @@ swh:decimator a :Plugin ;
      :index 1 ;
      :symbol "fs" ;
      :minimum 0.001 ;
-     :maximum 1 ;
-     :default 1 ;
+     :maximum 48000 ;
+     :default 48000 ;
      :portProperty :sampleRate ;
    ] ;
   

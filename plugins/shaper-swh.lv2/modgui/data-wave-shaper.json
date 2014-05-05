@@ -1,0 +1,11 @@
+{
+    "author": "SWH", 
+    "color": "orange", 
+    "controls": [
+        {
+            "name": "Waveshape", 
+            "symbol": "shapep"
+        }
+    ], 
+    "label": "Wave shaper"
+}
