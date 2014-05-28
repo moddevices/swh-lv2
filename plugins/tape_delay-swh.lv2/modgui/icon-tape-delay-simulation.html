@@ -1,15 +1,39 @@
-<div class="mod-pedal mod-pedal-lata mod-eight-knobs mod-boxy75 mod-{{color}}">
+<div class="swr-tapedelay mod-pedal mod-pedal-lata mod-eight-knobs mod-{{color}}">
     <div mod-role="drag-handle" class="mod-drag-handle"></div>
-    <div class="mod-plugin-author"><h1>{{author}}</h1></div>
-    <div class="mod-plugin-name"><h1>{{label}}</h1></div>
     <div class="mod-light on" mod-role="bypass-light"></div>
-    <div class="mod-control-group clearfix">
-        {{#controls}}
-        <div class="mod-knob">
-            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
-            <span class="mod-knob-title">{{name}}</span>
+    <div class="mod-control-group clearfix" id="top">
+        <div class="mod-knob" id="t1">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="t1d"></div>
+            <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="t1d"></div>
+
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="t1a_db"></div>
         </div>
-        {{/controls}}
+        <div class="mod-knob" id="t2">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="t2d"></div>
+            <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="t2d"></div>
+
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="t2a_db"></div>
+        </div>
+        <div class="mod-knob" id="t3">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="t3d"></div>
+            <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="t3d"></div>
+
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="t3a_db"></div>
+        </div>
+        <div class="mod-knob" id="t4">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="t4d"></div>
+            <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="t4d"></div>
+
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="t4a_db"></div>
+        </div>
+    </div>
+    <div class="mod-control-group">
+      <div class="mod-knob" id="speed">
+          <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="speed"></div>
+      </div>
+      <div class="mod-knob" id="da_db">
+          <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="da_db"></div>
+      </div>
     </div>
    <div class="mod-footswitch" mod-role="bypass"></div>
    <div class="mod-pedal-input">
@@ -37,3 +61,104 @@
         {{/effect.ports.midi.output}}
    </div>
 </div>
+<style>
+    .swr-tapedelay * {
+        color: white !important;
+    }
+    .swr-tapedelay .mod-plugin-name , .swr-tapedelay .mod-plugin-author  {
+        display: none;
+    }
+    .swr-tapedelay .mod-control-group .mod-knob {
+        text-align: center;
+        width: 70px
+        }
+    .mod-knob#speed {
+      position: absolute;
+      top: 66px;
+      left: 20px;
+    }
+    .mod-knob#da_db {
+      position: absolute;
+      top: 66px;
+      left: 265px;
+    }
+
+    .swr-tapedelay .mod-control-group .mod-knob#Order .mod-knob-image {
+        background-image:url(/resources/3switch.png{{{ns}}}) !important;
+        background-repeat:no-repeat;
+        background-size:240px 80px;
+        height:60px;
+        margin:3px auto;
+        width:60px;
+        cursor: pointer;
+    }
+    .swr-tapedelay .mod-knob-title {
+        position: relative !important;
+        padding-top: 20px;
+    }
+    .swr-tapedelay {
+        background-image:url(/resources/back.png{{{ns}}}) !important;
+        background-size:461px 508px;
+        width: 461px;
+        height: 508px;
+    }
+    .swr-tapedelay .mod-control-group {
+        top: 134px;
+        left: 48px;
+    }
+    .swr-tapedelay .mod-control-group .mod-knob .mod-knob-image {
+      background-image: url(/resources/knob.png{{{ns}}});
+      background-position:left center;
+      background-repeat:no-repeat;
+      background-size:auto 55px;
+      height:55px;
+      width:55px;
+      margin:0 auto 5px auto;
+      cursor: pointer;
+      position:relative;
+      overflow:hidden;
+    }
+    .swr-tapedelay .mod-light {
+        top: 336px;
+    }
+    .swr-tapedelay .mod-footswitch {
+        background-image:url(/resources/footswitch.png{{{ns}}});
+        background-position:top center;
+        background-repeat:no-repeat;
+        background-size:auto 132px;
+        bottom: 65px;
+        cursor:pointer;
+        height:66px;
+        width: 66px;
+        left: 211px !important;
+        position:absolute;
+    }
+    .swr-tapedelay .mod-knob-value {
+        color: #ff5555 !important;
+        background: #222;
+        font-family: monospace;
+        text-align: right;
+        margin: 5px 0 8px 0;
+        padding-right: 2px;
+        border: 1px inset #555;
+        display: block;
+        height: 20px;
+        width: 50px;
+        overflow: hidden;
+    }
+    .swr-tapedelay .mod-footswitch.on {
+        background-position:top center;
+    }
+    .swr-tapedelay .mod-footswitch.off {
+        background-position:bottom center;
+    }
+    .swr-tapedelay .mod-pedal-input {
+        top: 120px;
+    }
+    .swr-tapedelay .mod-pedal-output {
+        top: 120px;
+    }
+    .swr-tapedelay .mod-pedal-output>*  {
+        margin-bottom: 75px !important;
+    }
+</style>
