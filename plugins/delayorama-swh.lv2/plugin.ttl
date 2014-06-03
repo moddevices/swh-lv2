@@ -375,6 +375,7 @@ source: http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#tth_sEc2.31
    mod:gui [
         a mod:Gui;
         mod:resourcesDirectory <modgui>;
+        mod:stylesheet <modgui/delayorama.css>;
         mod:iconTemplate <modgui/icon-delayorama.html>;
         mod:templateData <modgui/data-delayorama.json>;
         mod:screenshot <modgui/screenshot-delayorama.png>;
