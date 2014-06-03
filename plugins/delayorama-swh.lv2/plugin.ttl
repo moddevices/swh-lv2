@@ -23,6 +23,22 @@ swh:delayorama a :Plugin ;
    ] ;
    doap:license <http://usefulinc.com/doap/licenses/gpl> ;
    :documentation <http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#delayorama> ;
+   
+rdfs:comment """
+Random seed: Controls the random numbers that will be used to stagger the delays and amplitudes if random is turned up on them. Changing this forces the random values to be recalulated.
+Input gain (dB): Controls the gain of the input signal in dB's.
+Feedback (%): Controls the amount of output signal fed back into the input.
+Number of taps: Controls the number of taps in the delay.
+First delay (s): The time of the first delay.
+Delay range (s): The time difference between the first and last delay.
+Delay change: The scaling factor between one delay and the next.
+Delay random (%): The random factor applied to the delay.
+Amplitude change: The scaling factor between one amplitude and the next.
+Amplitude random (%): The random factor applied to the amplitude.
+Dry/wet mix: The level of delayed sound mixed into the output.
+
+source: http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#tth_sEc2.31
+""";
 
    :port [
      a :InputPort, :ControlPort ;
