@@ -1,16 +1,59 @@
-<div class="mod-pedal mod-pedal-lata mod-eight-knobs mod-boxy75 mod-{{color}}">
+<div class="swh-delayorama mod-pedal mod-pedal-lata mod-eight-knobs mod-boxy75 mod-{{color}}">
     <div mod-role="drag-handle" class="mod-drag-handle"></div>
     <div class="mod-plugin-author"><h1>{{author}}</h1></div>
     <div class="mod-plugin-name"><h1>{{label}}</h1></div>
     <div class="mod-light on" mod-role="bypass-light"></div>
-    <div class="mod-control-group clearfix">
-        {{#controls}}
+<div class="mod-control-group group1">
         <div class="mod-knob">
-            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
-            <span class="mod-knob-title">{{name}}</span>
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="gain"></div>
+            <span class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="gain"></span>
         </div>
-        {{/controls}}
+        <div class="mod-knob">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="first_delay"></div>
+             <span class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="first_delay"></span>
+        </div>
+        <div class="mod-knob">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="feedback_pc"></div>
+            <span class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="feedback_pc"></span>
+        </div>
+        <div class="mod-knob">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="tap_count" ></div>
+            <span class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="tap_count"></span>
+        </div>
+
+        <div class="mod-slider">
+            <div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="delay_range"></div>
+        </div>
+  </div>
+  <span class="mod-slider-value" mod-role="input-control-value" mod-port-symbol="delay_range"></span>
+
+  <div class="mod-control-group group2">
+        <div class="mod-knob">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="delay_scale"></div>
+             <span class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="delay_scale"></span>
+        </div>
+        <div class="mod-knob">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="gain_scale"></div>
+            <span class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="gain_scale"></span>
+        </div>
+        <div class="mod-knob">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="delay_rand_pc"></div>
+             <span class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="delay_rand_pc"></span>
+        </div>
+        <div class="mod-knob">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="gain_rand_pc"></div>
+            <span class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="gain_rand_pc"></span>
+        </div>
+        <div class="mod-slider">
+            <div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="seed" ></div>
+        </div>
     </div>
+    <div class="mod-control-group" id="wet">
+      <div class="mod-knob">
+          <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="wet"></div>
+      </div>
+    </div>
+
    <div class="mod-footswitch" mod-role="bypass"></div>
    <div class="mod-pedal-input">
        {{#effect.ports.audio.input}}
