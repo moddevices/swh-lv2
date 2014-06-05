@@ -23,6 +23,12 @@ swh:decimator a :Plugin ;
    ] ;
    doap:license <http://usefulinc.com/doap/licenses/gpl> ;
    :documentation <http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#decimator> ;
+   
+rdfs:comment """
+Decimates (reduces the effective sample rate), and reduces the bit depth of the input signal, allows non integer values for smooth transitions between clean and lofi signals.
+
+source: http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#tth_sEc2.26
+""";
 
    :port [
      a :InputPort, :ControlPort ;
