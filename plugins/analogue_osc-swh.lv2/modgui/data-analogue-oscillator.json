@@ -1,0 +1,23 @@
+{
+    "author": "SWH", 
+    "color": "green", 
+    "controls": [
+        {
+            "name": "Waveform", 
+            "symbol": "wave"
+        }, 
+        {
+            "name": "Frequency (Hz)", 
+            "symbol": "freq"
+        }, 
+        {
+            "name": "Warmth", 
+            "symbol": "warm"
+        }, 
+        {
+            "name": "Instability", 
+            "symbol": "instab"
+        }
+    ], 
+    "label": "Analogue Oscillator"
+}

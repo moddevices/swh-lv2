@@ -28,18 +28,23 @@ swh:analogueOsc a :Plugin ;
     
    :port [
      a :InputPort, :ControlPort ;
-     :name "Waveform (1=sin, 2=tri, 3=squ, 4=saw)" ;
+     :name "Waveform" ;
      :index 0 ;
      :symbol "wave" ;
      :minimum 1 ;
      :maximum 4 ;
      :default 1.0 ;
      :portProperty :integer ;
+     :portProperty :enumeration ;
+     :scalePoint [rdfs:label "Sine"; rdf:value 1];
+     :scalePoint [rdfs:label "Triangle"; rdf:value 2];
+     :scalePoint [rdfs:label "Square"; rdf:value 3];
+     :scalePoint [rdfs:label "Saw"; rdf:value 4];
    ] ;
   
    :port [
      a :InputPort, :ControlPort ;
-     :name "Frequency (Hz)" ;
+     :name "Frequency" ;
      :index 1 ;
      :symbol "freq" ;
      :minimum 0.000001 ;
@@ -47,6 +52,8 @@ swh:analogueOsc a :Plugin ;
      :default 440.0 ;
      :portProperty pprops:logarithmic ;
      :portProperty :sampleRate ;
+     :designation  time:beatsPerMinute;
+	 units:unit units:hz ;
    ] ;
   
    :port [
