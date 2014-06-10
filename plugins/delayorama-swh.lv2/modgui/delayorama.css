@@ -46,32 +46,32 @@
     }
 
     .swh-delayorama .mod-control-group.group1 {
-        margin-top: 132px;
+        margin-top: 126px;
         margin-left: 26px;
         float: left;
         width: 217px !important;
     }
     .swh-delayorama .mod-control-group.group2 {
-        margin-top: 132px;
+        margin-top: 126px;
         margin-left: 23px;
         float: left;
         width: 255px !important;
     }
     .swh-delayorama .mod-control-group.group1 .mod-knob {
       text-align: center;
-      margin: 0 29px 21px 0;
+      margin: 0 29px 24px 0;
       float: left;
     }
     .swh-delayorama .mod-control-group.group2 .mod-knob {
       text-align: center;
-      margin: 0 46px 18px 0;
+      margin: 0 46px 24px 0;
       float: left;
     }
 
     .swh-delayorama .mod-control-group .mod-slider {
       position: absolute;
       right: 0;
-      margin-top: 10px;
+      margin-top: 14px;
     }
     .swh-delayorama .mod-control-group .mod-knob .mod-knob-image {
       background-image: url(/resources/knob.png{{{ns}}});
