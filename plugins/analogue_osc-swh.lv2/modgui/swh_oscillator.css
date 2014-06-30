@@ -83,7 +83,7 @@
       background-size:auto 109px;
       height:109px;
       width:109px;
-      margin:103px auto 0 auto;
+      margin: 0 auto;
       cursor: pointer;
       position:relative;
       overflow:hidden;
@@ -97,6 +97,11 @@
       cursor: pointer;
       position:relative;
       overflow:hidden;
+    }
+    .swh-oscillator .mod-control-group.top {
+      width: 108px !important;
+      margin: auto;
+      margin-top: 105px !important;
     }
     .swh-oscillator .mod-control-group.bottom {
 width: 215px !important;
