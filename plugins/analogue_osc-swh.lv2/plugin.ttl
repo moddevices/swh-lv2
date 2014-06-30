@@ -160,6 +160,7 @@ swh:analogueOsc a :Plugin ;
    mod:gui [
         a mod:Gui;
         mod:resourcesDirectory <modgui>;
+        mod:stylesheet <modgui/swh_oscillator.css>;
         mod:iconTemplate <modgui/icon-analogue-oscillator.html>;
         mod:templateData <modgui/data-analogue-oscillator.json>;
         mod:screenshot <modgui/screenshot-analogue-oscillator.png>;
