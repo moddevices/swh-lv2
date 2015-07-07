@@ -28,11 +28,9 @@
     }
     .swh-oscillator {
         background-image:url(/resources/swh_oscillator.png{{{ns}}}) !important;
-        background-size: auto 464px;
         background-repeat: no-repeat;
-        background-position: 15px top;
-        width: 277px;
-        height: 464px;
+        width: 266px;
+        height: 456px;
     }
     .left {
       float: left !important;
@@ -101,7 +99,7 @@
     .swh-oscillator .mod-control-group.top {
       width: 108px !important;
       margin: auto;
-      margin-top: 105px !important;
+      margin-top: 96px !important;
     }
     .swh-oscillator .mod-control-group.bottom {
 width: 215px !important;
@@ -150,7 +148,7 @@ margin: -5px auto;
         cursor: pointer;
         height: 77px;
         width: 43px;
-        left: 60px !important;
+        left: 45px !important;
         position: absolute;
         z-index: 100
     }
@@ -178,7 +176,6 @@ margin: -5px auto;
     }
     .swh-oscillator .mod-pedal-output {
         top: 120px;
-        right: -41px
     }
     .swh-oscillator .mod-pedal-output>*  {
         margin-bottom: 75px !important;

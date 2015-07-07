@@ -25,10 +25,12 @@
     }
     .swh-delayorama {
         background-image:url(/resources/swh_delayorama.png{{{ns}}}) !important;
+/*
         background-size: 575px 464px;
-        background-position: 15px top;
-        width: 569px;
-        height: 464px;
+*/
+        width: 565px;
+        height: 456px;
+        border-radius: 0;
     }
      .swh-delayorama .mod-control-group {
       top: 0;
@@ -38,21 +40,21 @@
       position: relative;
      }
     .swh-delayorama .mod-control-group#wet {
-      left: 370px;
-      top: 375px;
+      left: 355px;
+      top: 365px;
       position: absolute;
       width: 70px !important;
       height: 70px !important;
     }
 
     .swh-delayorama .mod-control-group.group1 {
-        margin-top: 126px;
-        margin-left: 26px;
+        margin-top: 119px;
+        margin-left: 24px;
         float: left;
         width: 217px !important;
     }
     .swh-delayorama .mod-control-group.group2 {
-        margin-top: 126px;
+        margin-top: 119px;
         margin-left: 23px;
         float: left;
         width: 255px !important;
@@ -111,7 +113,7 @@
       height: 20px;
       width: 50px;
       left: 275px;
-      top: 80px;
+      top: 72px;
 
       overflow: hidden;
     }
