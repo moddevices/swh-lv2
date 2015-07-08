@@ -13,7 +13,7 @@
 @prefix units: &lt;http://lv2plug.in/ns/extensions/units#&gt; .
 @prefix epp: &lt;http://lv2plug.in/ns/ext/port-props/#&gt;.
 @prefix time: &lt;http://lv2plug.in/ns/ext/time/#&gt;.
-@prefix mod: &lt;http://portalmod.com/ns/modgui#&gt;.
+@prefix mod: &lt;http://moddevices.com/ns/modgui#&gt;.
 <xsl:for-each select="ladspa/plugin">
   <xsl:variable name="pluglabel" select="@label"/>
   <xsl:for-each select="group">
