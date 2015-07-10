@@ -1,0 +1,26 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+@prefix ui:     <http://lv2plug.in/ns/extensions/ui#> .
+
+<http://plugin.org.uk/swh-plugins/decimator>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-decimator.html> ;
+        modgui:stylesheet <modgui/stylesheet-decimator.css> ;
+        modgui:screenshot <modgui/screenshot-decimator.png> ;
+        modgui:thumbnail <modgui/thumbnail-decimator.png> ;
+        modgui:brand "SWH" ;
+        modgui:label "Decimator" ;
+        modgui:model "boxy" ;
+        modgui:panel "2-knobs" ;
+        modgui:color "orange" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "bits" ;
+            lv2:name "Bit depth" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "fs" ;
+            lv2:name "Sample rate" ;
+        ] ;
+    ] .

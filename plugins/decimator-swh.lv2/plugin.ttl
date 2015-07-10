@@ -9,8 +9,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix units: <http://lv2plug.in/ns/extensions/units#> .
 @prefix epp: <http://lv2plug.in/ns/ext/port-props/#>.
-@prefix time: <http://lv2plug.in/ns/ext/time/#>.
-@prefix mod: <http://moddevices.com/ns/modgui#>.
+@prefix time: <http://lv2plug.in/ns/ext/time#>.
+@prefix mod: <http://moddevices.com/ns/mod#>.
 
 swh:decimator a :Plugin ;
    a :DistortionPlugin ;
@@ -24,6 +24,9 @@ swh:decimator a :Plugin ;
    doap:license <http://usefulinc.com/doap/licenses/gpl> ;
    :documentation <http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#decimator> ;
    
+   mod:brand "SWH";
+   mod:label "Decimator";
+
 rdfs:comment """
 Decimates (reduces the effective sample rate), and reduces the bit depth of the input signal, allows non integer values for smooth transitions between clean and lofi signals.
 
@@ -122,12 +125,4 @@ plugin_data->count = count;
     """ ;
    ] ;
   
-   swhext:createdBy <http://plugin.org.uk/swh-plugins/toTurtle.xsl> ;
-   mod:gui [
-        a mod:Gui;
-        mod:resourcesDirectory <modgui>;
-        mod:iconTemplate <modgui/icon-decimator.html>;
-        mod:templateData <modgui/data-decimator.json>;
-        mod:screenshot <modgui/screenshot-decimator.png>;
-        mod:thumbnail <modgui/thumb-decimator.png>;
-    ] .
+   swhext:createdBy <http://plugin.org.uk/swh-plugins/toTurtle.xsl> .
