@@ -1,0 +1,37 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://plugin.org.uk/swh-plugins/vynil>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-vynil-vinyl-effect.html> ;
+        modgui:stylesheet <modgui/stylesheet-vynil-vinyl-effect.css> ;
+        modgui:screenshot <modgui/screenshot-vynil-vinyl-effect.png> ;
+        modgui:thumbnail <modgui/thumbnail-vynil-vinyl-effect.png> ;
+        modgui:brand "SWH" ;
+        modgui:label "VyNil" ;
+        modgui:model "lata" ;
+        modgui:panel "7-knobs" ;
+        modgui:color "brown" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "year" ;
+            lv2:name "Year" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "rpm" ;
+            lv2:name "RPM" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "warp" ;
+            lv2:name "Surface" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "click" ;
+            lv2:name "Crackle" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "wear" ;
+            lv2:name "Wear" ;
+        ] ;
+    ] .
