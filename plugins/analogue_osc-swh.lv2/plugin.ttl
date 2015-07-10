@@ -9,8 +9,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix units: <http://lv2plug.in/ns/extensions/units#> .
 @prefix epp: <http://lv2plug.in/ns/ext/port-props/#>.
-@prefix time: <http://lv2plug.in/ns/ext/time/#>.
-@prefix mod: <http://moddevices.com/ns/modgui#>.
+@prefix time: <http://lv2plug.in/ns/ext/time#>.
+@prefix mod: <http://moddevices.com/ns/mod#>.
+@prefix modgui: <http://moddevices.com/ns/modgui#>.
 
 swh:analogueOsc a :Plugin ;
    a :OscillatorPlugin ;
@@ -23,6 +24,9 @@ swh:analogueOsc a :Plugin ;
    ] ;
    doap:license <http://usefulinc.com/doap/licenses/gpl> ;
    :documentation <http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#analogueOsc> ;
+
+   mod:brand "SWH";
+   mod:label "Analogue Oscillator";
 
    :pluginProperty :hardRtCapable ;
     
@@ -52,8 +56,7 @@ swh:analogueOsc a :Plugin ;
      :default 440.0 ;
      :portProperty pprops:logarithmic ;
      :portProperty :sampleRate ;
-     :designation  time:beatsPerMinute;
-	 units:unit units:hz ;
+     units:unit units:hz ;
    ] ;
   
    :port [
@@ -157,12 +160,10 @@ swh:analogueOsc a :Plugin ;
    ] ;
   
    swhext:createdBy <http://plugin.org.uk/swh-plugins/toTurtle.xsl> ;
-   mod:gui [
-        a mod:Gui;
-        mod:resourcesDirectory <modgui>;
-        mod:stylesheet <modgui/swh_oscillator.css>;
-        mod:iconTemplate <modgui/icon-analogue-oscillator.html>;
-        mod:templateData <modgui/data-analogue-oscillator.json>;
-        mod:screenshot <modgui/screenshot-analogue-oscillator.png>;
-        mod:thumbnail <modgui/thumb-analogue-oscillator.png>;
+   modgui:gui [
+        modgui:resourcesDirectory <modgui>;
+        modgui:stylesheet <modgui/swh_oscillator.css>;
+        modgui:iconTemplate <modgui/icon-analogue-oscillator.html>;
+        modgui:screenshot <modgui/screenshot-analogue-oscillator.png>;
+        modgui:thumbnail <modgui/thumb-analogue-oscillator.png>;
     ] .

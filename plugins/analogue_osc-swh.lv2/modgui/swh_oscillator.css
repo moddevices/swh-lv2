@@ -1,4 +1,4 @@
-<style>
+
     .swh-oscillator * {
         color: white !important;
     }
@@ -120,25 +120,48 @@ margin: -5px auto;
       position:relative;
       overflow:hidden;
     }
-    .swh-oscillator .mod-slider {
-        color: black;
-        font-size: 11px;
-        height: 140px;
-        margin-bottom: 2px;
-        margin-left: 18px;
-        overflow: hidden;
-        position: relative;
-        text-align: center;
-        width: 33px;
-    }
-    .swh-oscillator .mod-slider .mod-slider-image {
-        background-image: url(/resources/_strip.png{{{ns}}});
-        background-repeat: no-repeat;
-        background-size: auto 110px;
-        height: 110px;
-        margin: 0 auto;
-        width: 44px;
-    }
+/* SLIDER
+================================================ */
+.swh-oscillator .mod-slider:first-child {
+    margin-left:8px;
+}
+.swh-oscillator .mod-slider .mod-slider-title {
+    display:block;
+    font-size:11px;
+    font-weight:bold;
+    height:7px;
+    line-height:1;
+    margin-bottom:3px;
+    overflow:hidden;
+    padding:7px 0 5px;
+    position:relative;
+}
+.swh-oscillator .mod-slider .mod-slider-image:hover {
+    cursor:pointer;
+}
+.swh-oscillator .mod-slider {
+    color:black;
+    float:left;
+    font-size:11px;
+    height:140px;
+    margin-bottom:2px;
+    margin-right:2px;
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    width:33px;
+    left: 15px;
+}
+.swh-oscillator .mod-slider .mod-slider-image {
+    background-image: url(/resources/_strip.png{{{ns}}});
+    background-repeat:no-repeat;
+    background-size:auto 110px;
+    height:110px;
+    margin:0 auto;
+    width:44px;
+}
+/* other stuff
+================================================ */
     .swh-oscillator .mod-footswitch {
         background-image:url(/resources/switch-key.png{{{ns}}});
         background-position: top center;
@@ -180,4 +203,3 @@ margin: -5px auto;
     .swh-oscillator .mod-pedal-output>*  {
         margin-bottom: 75px !important;
     }
-</style>
