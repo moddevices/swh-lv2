@@ -1,0 +1,57 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://plugin.org.uk/swh-plugins/harmonicGen>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-harmonic-generator.html> ;
+        modgui:stylesheet <modgui/stylesheet-harmonic-generator.css> ;
+        modgui:screenshot <modgui/screenshot-harmonic-generator.png> ;
+        modgui:thumbnail <modgui/thumbnail-harmonic-generator.png> ;
+        modgui:brand "SWH" ;
+        modgui:label "Harmonic generator" ;
+        modgui:model "boxy" ;
+        modgui:panel "10-sliders" ;
+        modgui:color "green" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "mag_1" ;
+            lv2:name "Fund" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "mag_2" ;
+            lv2:name "2nd" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "mag_3" ;
+            lv2:name "3rd" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "mag_4" ;
+            lv2:name "4th" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "mag_5" ;
+            lv2:name "5th" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "mag_6" ;
+            lv2:name "6th" ;
+        ] , [
+            lv2:index 6 ;
+            lv2:symbol "mag_7" ;
+            lv2:name "7th" ;
+        ] , [
+            lv2:index 7 ;
+            lv2:symbol "mag_8" ;
+            lv2:name "8th" ;
+        ] , [
+            lv2:index 8 ;
+            lv2:symbol "mag_9" ;
+            lv2:name "9th" ;
+        ] , [
+            lv2:index 9 ;
+            lv2:symbol "mag_10" ;
+            lv2:name "10th" ;
+        ] ;
+    ] .
