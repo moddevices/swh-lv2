@@ -1,0 +1,37 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://plugin.org.uk/swh-plugins/revdelay>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-reverse-delay-5s-max.html> ;
+        modgui:stylesheet <modgui/stylesheet-reverse-delay-5s-max.css> ;
+        modgui:screenshot <modgui/screenshot-reverse-delay-5s-max.png> ;
+        modgui:thumbnail <modgui/thumbnail-reverse-delay-5s-max.png> ;
+        modgui:brand "SWH" ;
+        modgui:label "Reverse Delay" ;
+        modgui:model "lata" ;
+        modgui:panel "7-knobs" ;
+        modgui:color "white" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "delay_time" ;
+            lv2:name "Delay Time" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "dry_level" ;
+            lv2:name "Dry Level" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "wet_level" ;
+            lv2:name "Wet Level" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "feedback" ;
+            lv2:name "Feedback" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "xfade_samp" ;
+            lv2:name "Crossfade" ;
+        ] ;
+    ] .

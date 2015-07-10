@@ -9,8 +9,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix units: <http://lv2plug.in/ns/extensions/units#> .
 @prefix epp: <http://lv2plug.in/ns/ext/port-props/#>.
-@prefix time: <http://lv2plug.in/ns/ext/time/#>.
-@prefix mod: <http://moddevices.com/ns/modgui#>.
+@prefix time: <http://lv2plug.in/ns/ext/time#>.
+@prefix mod: <http://moddevices.com/ns/mod#>.
 
 swh:revdelay a :Plugin ;
    a :DelayPlugin ;
@@ -23,6 +23,9 @@ swh:revdelay a :Plugin ;
    ] ;
    doap:license <http://usefulinc.com/doap/licenses/gpl> ;
    :documentation <http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#revdelay> ;
+
+   mod:brand "SWH";
+   mod:label "Reverse Delay";
 
    :pluginProperty :hardRtCapable ;
     
@@ -229,12 +232,4 @@ swh:revdelay a :Plugin ;
     """ ;
    ] ;
   
-   swhext:createdBy <http://plugin.org.uk/swh-plugins/toTurtle.xsl> ;
-   mod:gui [
-        a mod:Gui;
-        mod:resourcesDirectory <modgui>;
-        mod:iconTemplate <modgui/icon-reverse-delay-5s-max.html>;
-        mod:templateData <modgui/data-reverse-delay-5s-max.json>;
-        mod:screenshot <modgui/screenshot-reverse-delay-5s-max.png>;
-        mod:thumbnail <modgui/thumb-reverse-delay-5s-max.png>;
-    ] .
+   swhext:createdBy <http://plugin.org.uk/swh-plugins/toTurtle.xsl> .
