@@ -9,8 +9,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix units: <http://lv2plug.in/ns/extensions/units#> .
 @prefix epp: <http://lv2plug.in/ns/ext/port-props/#>.
-@prefix time: <http://lv2plug.in/ns/ext/time/#>.
-@prefix mod: <http://moddevices.com/ns/modgui#>.
+@prefix time: <http://lv2plug.in/ns/ext/time#>.
+@prefix mod: <http://moddevices.com/ns/mod#>.
+@prefix modgui: <http://moddevices.com/ns/modgui#>.
 
 swh:tapeDelay a :Plugin ;
    a :DelayPlugin ;
@@ -25,6 +26,9 @@ swh:tapeDelay a :Plugin ;
    doap:license <http://usefulinc.com/doap/licenses/gpl> ;
    :documentation <http://plugin.org.uk/ladspa-swh/docs/ladspa-swh.html#tapeDelay> ;
    
+   mod:brand "SWH";
+   mod:label "Tape Delay";
+
 rdfs:comment """
 'Correctly models the tape motion and some of the smear effect, there is no simulation of the head saturation yet, as I don't have a good model of it. When I get one I will add it.The way the tape accelerates and decelerates gives a nicer delay effect for many purposes.'
 
@@ -261,11 +265,10 @@ plugin_data->z2 = z2;
    ] ;
   
    swhext:createdBy <http://plugin.org.uk/swh-plugins/toTurtle.xsl> ;
-   mod:gui [
-        a mod:Gui;
-        mod:resourcesDirectory <modgui>;
-        mod:iconTemplate <modgui/icon-tape-delay-simulation.html>;
-        mod:templateData <modgui/data-tape-delay-simulation.json>;
-        mod:screenshot <modgui/screenshot-tape-delay-simulation.png>;
-        mod:thumbnail <modgui/thumb-tape-delay-simulation.png>;
+   modgui:gui [
+        modgui:resourcesDirectory <modgui>;
+        modgui:iconTemplate <modgui/icon-tape-delay-simulation.html>;
+        modgui:stylesheet <modgui/swh-tape.css>;
+        modgui:screenshot <modgui/screenshot-tape-delay-simulation.png>;
+        modgui:thumbnail <modgui/thumb-tape-delay-simulation.png>;
     ] .
